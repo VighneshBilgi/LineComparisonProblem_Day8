@@ -45,7 +45,20 @@ public class LineComparisonProblem {
         else{
             System.out.println("The Lines are NOT equal");
         }
+        int compare_to =  (Double.toString(length1) ).compareTo( Double.toString(length2) );
+        // "compare_to" variable holds the integer value outputted by .compareTo() method.
+        // If compare_to is -ve , then Line 1 is smaller ,
+        // else if compare_to is +ve , then Line 1 is larger
+        // else Line 1 is equal to Line 2
 
+        if(compare_to <0){
+            System.out.println("Line 1 is LESSER than Line 2");
+        } else if (compare_to >0) {
+            System.out.println("Line 1 is GREATER than Line 2");
+        }
+        else {
+            System.out.println("Line 1 is EQUAL to Line 2");
+        }
     }
 
 }
