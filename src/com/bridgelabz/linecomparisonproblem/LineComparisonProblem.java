@@ -40,7 +40,7 @@ class Point {
 class Line extends Point{
     static double length1 = 0.0, length2 = 0.0;
 
-    public static void calculateLine(){
+    public void calculateLine(){
         length1 = Math.sqrt((Math.pow(x2-x1,2)+Math.pow(y2-y1,2)));
         length2 = Math.sqrt((Math.pow(x4-x3,2)+Math.pow(y4-y3,2)));
 
@@ -48,7 +48,7 @@ class Line extends Point{
         System.out.println("Length of Line 2 is: " + length2);
     }
 
-    public static void lineEquality(){
+    public void lineEquality(){
         if( (Double.toString(length1) ).equals( Double.toString(length2) ) == true){
             System.out.println("The Lines are equal");
         }
@@ -57,7 +57,7 @@ class Line extends Point{
         }
     }
 
-    public static void lineComparison(){
+    public void lineComparison(){
          int compare_to =  (Double.toString(length1) ).compareTo( Double.toString(length2) );
 //      "compare_to" variable holds the integer value outputted by .compareTo() method.
 //      If compare_to is -ve , then Line 1 is smaller ,
@@ -79,10 +79,8 @@ public class LineComparisonProblem {
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
 
-        Point point = new Point();
-        point.getPoints();
-
         Line line = new Line();
+        line.getPoints();
         line.calculateLine();
         line.lineEquality();
         line.lineComparison();
